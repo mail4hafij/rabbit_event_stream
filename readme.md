@@ -3,6 +3,7 @@
 * Node.js 8.x  
 * Navigate to ./scenarios and run ``` npm install ```
 
+# The idea
 The idea here is, we run a web server that will receive events and push it to rabbitMQ.
 In order to mimic events, navigate to ./scenarios and run dummy_events.js with node.
 The dummy events should be now added to rabbitMQ. You can login to rabbitMQ at localhost:15672 
