@@ -1,7 +1,9 @@
 # Receving and saving events to RabbitMQ 
 The idea here is, we run a web server that will receive events and push it to rabbitMQ.
 In order to mimic events, navigate to ./scenarios and run dummy_events.js with node.
-The dummy events should be now added to rabbitMQ. You can login to rabbitMQ at localhost:15672 
+The dummy events should now be added to rabbitMQ. You can login to rabbitMQ at localhost:15672
+and see all the events. You can also check the web endpoint localhost:1337/status to see if
+the rabbitMQ is running properly.
 
 
 1. Run the docker compose file.
