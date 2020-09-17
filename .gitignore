@@ -1,0 +1,13 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# npm
+node_modules
+*.log
+*.gz

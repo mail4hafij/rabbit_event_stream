@@ -1,0 +1,36 @@
+version: '3.5'
+services:
+  server:
+    build: ./server
+    # image: your_custome_image_name
+    # container_name: your_custom_container_name
+    depends_on:
+    - rabbit
+    ports:
+    - "1337:1337"
+    # defining a network for this container.
+    networks: 
+      - rabbit_event_stream
+    volumes:
+      - servervol:/logs
+  rabbit:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+    - RABBITMQ_DEFAULT_USER=esuser
+    - RABBITMQ_DEFAULT_PASS=espassword
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - rabbitvol:/var/lib/rabbitmq
+    # defining a network for this container.
+    networks:
+      - rabbit_event_stream
+volumes:
+  rabbitvol:
+  servervol:
+networks: 
+  # defining our rabbit_event_stream network
+  rabbit_event_stream: 
+    name: rabbit_event_stream

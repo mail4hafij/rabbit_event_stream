@@ -1,0 +1,16 @@
+{
+  "name": "scenarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dummy_events.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammad Hafijur Rahman <mail4hafij@yahoo.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "2.3.0",
+    "superagent": "3.8.2",
+    "uuid": "^3.1.0"
+  }
+}
