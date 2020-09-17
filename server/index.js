@@ -17,19 +17,20 @@ app.get('/status', (req, res) => {
   const msg = {
     Id: 'status',
     Timestamp: new Date().toJSON(),
-    SourceEnvironment: 'N/A',
-    SourceComponent: 'N/A',
+    SourceEnvironment: 'test',
+    SourceComponent: 'test',
     Event: {
       Name: 'status'
     }
   }
   try {
     rabbit.publish(msg)
-    const msg = 'rabbitMQ is working'
-    res.status(200).send(msg)
+    const responseMsg = 'rabbitMQ is working'
+    res.status(200).send(responseMsg)
   } catch (err) {
     const msg = 'rabbitMQ is not working'
-    res.status(500).send(msg)
+    console.log(err)
+    res.status(500).send(responseMsg)
     process.exit(1)
   }
 })
