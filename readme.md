@@ -4,9 +4,9 @@ In order to mimic events, navigate to ./scenarios and run dummy_events.js with n
 The dummy events should be now added to rabbitMQ. You can login to rabbitMQ at localhost:15672 
 
 
-1. (in ./rabbit_event_stream) run the docker compose file.
+1. Run the docker compose file.
 ``` docker-compose up ```  
-2. (in ./rabbit_event_stream) run dummy scenario, for example:  
+2. Run the dummy scenario, for example:  
 ``` node scenarios/dummy_events.js ```  
 
 
@@ -14,7 +14,7 @@ We can now build a microservice (let's say my_first_microservice) that should co
 events from rabbitMQ and do something. In order to my_first_microservice to consume events from rabbitMQ
 the container must use the same network that the rabbitMQ is running in.
 
-1. (in ./my_first_microservice) start the service you may be developing with docker-compose and attach it to the rabbit_event_stream network.  
+1. Start the service (my_first_microservice) you may be developing with docker-compose and attach it to the rabbit_event_stream network.  
 ``` docker-compose up --build ```   
 
 or for a service that is not run via compose:  
