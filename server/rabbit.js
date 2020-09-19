@@ -11,10 +11,10 @@ rabbit.publish = function (msg) {
   rabbit.conn.createChannel((err, ch) => {
     if (err) throw err
     const jsonPayload = JSON.stringify(msg)
-    const ex = 'event_stream'
+    const ex = 'rabbit_event_stream'
     ch.assertExchange(ex, 'fanout', { durable: true })
     ch.publish(ex, '', Buffer.from(jsonPayload), { persistent: true })
-    console.log(` [x] Published '${jsonPayload}' to the event stream`)
+    console.log(` [x] Published '${jsonPayload}' to the rabbit event stream`)
   })
 }
 

@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.post('/publish', (req, res) => {
   const msg = req.body
   rabbit.publish(msg)
-  res.send('i published the message to the event stream')
+  res.send('Successfully published event to RabbitMQ')
 })
 
 app.get('/status', (req, res) => {
@@ -25,10 +25,10 @@ app.get('/status', (req, res) => {
   }
   try {
     rabbit.publish(msg)
-    const responseMsg = 'rabbitMQ is working'
+    const responseMsg = 'RabbitMQ is working'
     res.status(200).send(responseMsg)
   } catch (err) {
-    const msg = 'rabbitMQ is not working'
+    const msg = 'RabbitMQ is not working'
     console.log(err)
     res.status(500).send(responseMsg)
     process.exit(1)
