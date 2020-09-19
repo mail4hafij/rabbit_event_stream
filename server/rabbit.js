@@ -14,7 +14,7 @@ rabbit.publish = function (msg) {
     const ex = 'rabbit_event_stream'
     ch.assertExchange(ex, 'fanout', { durable: true })
     ch.publish(ex, '', Buffer.from(jsonPayload), { persistent: true })
-    console.log(` [x] Published '${jsonPayload}' to the rabbit event stream`)
+    console.log(`Published '${jsonPayload}' to the rabbit event stream`)
   })
 }
 
