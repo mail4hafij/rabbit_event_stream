@@ -4,9 +4,9 @@ In order to mimic events, navigate to ./scenarios and run dummy_events.js with n
 The dummy events should now be added to rabbitMQ. 
 
 Endpoints:
-    * RabbitMQ endpoint, localhost:15672
-    * Diagnostic endpoint, localhost:1337/status 
-    * The endpoint to post an event, localhost:1337/publish
+    - RabitMQ endpoint, localhost:15672
+    - Diagnostic endpoint, localhost:1337/status 
+    - The endpoint to post an event, localhost:1337/publish
 
 
 1. Run the docker compose file.
