@@ -3,12 +3,12 @@ The idea here is, we run a web server that will receive events and push it to ra
 In order to mimic events, navigate to ./scenarios and run dummy_events.js with node.
 The dummy events should now be added to rabbitMQ. 
 
-Endpoints 
+Endpoints:
   - RabitMQ endpoint, localhost:15672
   - Diagnostic endpoint, localhost:1337/status 
   - The endpoint to post an event, localhost:1337/publish
   
-  
+How to run locally:
 1. Run the docker compose file.
 ``` docker-compose up ```  
 2. Run the dummy scenario, for example:  
