@@ -5,19 +5,19 @@ console.log(chalk.blue('putting dummy messages on local event stream'))
 
 ;(async () => {
   const userId = 123
-  console.log('sending hello world')
+  console.log('Something Happened')
 
   await util.seconds(2)
   await util.publish(
-    'hello world event',
+    'Something Happened',
     `
       {
         "Id": "123",
         "Timestamp": "${new Date().toJSON()}",
-        "SourceEnvironment": "develop",
+        "SourceEnvironment": "dev",
         "SourceComponent": "WEB",
         "Event": {
-          "Name": "hello world",
+          "Name": "Something Happened",
           "Path": "source/of/event/in/the/code",
           "Data": {
             "UserId": ${userId}
@@ -28,15 +28,15 @@ console.log(chalk.blue('putting dummy messages on local event stream'))
   )
   await util.seconds(2)
   await util.publish(
-    'loremipsum event',
+    'Hello World',
     `
       {
-        "Id": "123",
+        "Id": "234",
         "Timestamp": "${new Date().toJSON()}",
-        "SourceEnvironment": "develop",
+        "SourceEnvironment": "dev",
         "SourceComponent": "WEB",
         "Event": {
-          "Name": "loremipsum",
+          "Name": "Hello World",
           "Path": "source/of/event/in/the/code",
           "Data": {
             "UserId": ${userId}
