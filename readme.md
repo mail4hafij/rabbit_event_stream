@@ -13,7 +13,7 @@ Endpoints:
 How to run locally:
 1. Run the docker compose file.
 ``` docker-compose up ```  
-2. Run the dummy scenario, for example:  
+2. Run the dummy scenarios.  
 ``` node scenarios/dummy_events.js ```  
 
 
