@@ -1,6 +1,6 @@
 # Adding events to RabbitMQ 
 The idea here is, we run a web server that will receive events and push it to rabbitMQ.
-In order to mimic events, navigate to ./scenarios and run dummy_events.js with node.
+In order to mimic sending events, navigate to ./scenarios and run dummy_events.js with node.
 The dummy events should now be added to rabbitMQ. 
 
 Techonology stack: Docker-compose, Node.js 8.x, RabbitMQ host.
