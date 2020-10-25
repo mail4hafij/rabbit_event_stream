@@ -26,10 +26,10 @@ The next step is to build a microservice (let's say internal_notification_servic
 
 or for a service that is not run via compose:  
 
-1. First build it from the docker file:  
+1. First build it from the docker file: 
 ``` docker build . -t internal_notification_service_image ```  
 
-2. Then run it with the following mentioned paremeters:  This will attach the docker container (of internal_notification_service) to use the rabbit_event_stream network.
+2. Then run it with the following mentioned paremeters:
 ``` docker run --name my_first_microservice_container --network=rabbit_event_stream my_first_microservice_image ``` 
 
 Let's test then,
