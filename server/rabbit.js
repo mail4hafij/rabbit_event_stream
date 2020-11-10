@@ -21,6 +21,7 @@ rabbit.publish = function (msg) {
 // LOCAL: amqp://esuser:espassword@rabbit
 // PRODUCTION: amqps://esuser:STRONG_PASS_AND_YOUR_SERVER_URL@SERVER.COM:SERVER_PORT
 function tryConnect (resolve, attempt = 0) {
+  // TODO: should read from the environment variables (RABBITMQ_HOSTNAME, RABBITMQ_USER, RABBITMQ_PASSWORD).
   amqp.connect('amqp://esuser:espassword@rabbit', (err, conn) => {
     if (err) {
       console.log(err)

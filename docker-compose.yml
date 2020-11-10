@@ -17,11 +17,12 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     environment:
-    - RABBITMQ_DEFAULT_USER=esuser
-    - RABBITMQ_DEFAULT_PASS=espassword
+    - RABBITMQ_HOSTNAME=rabbit
+    - RABBITMQ_USER=esuser
+    - RABBITMQ_PASSWORD=espassword
     ports:
-      - "15672:15672"
-      - "5672:5672"
+      - "15672:15672" # RabbitMQ http API
+      - "5672:5672"   # AMQP connection to RabbitMQ
     volumes:
       - rabbitvol:/var/lib/rabbitmq
     # defining a network for this container.
