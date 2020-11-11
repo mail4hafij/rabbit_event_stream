@@ -4,10 +4,15 @@ services:
     build: ./server
     # image: your_custome_image_name
     # container_name: your_custom_container_name
+    environment:
+      # pass all the environment variables
+      - RABBITMQ_HOST=rabbit
+      - RABBITMQ_USER=admin
+      - RABBITMQ_PASS=admin
     depends_on:
-    - rabbit
+      - rabbit
     ports:
-    - "1337:1337"
+      - "1337:1337"
     # defining a network for this container.
     networks: 
       - rabbit_event_stream
@@ -17,9 +22,9 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     environment:
-    - RABBITMQ_HOSTNAME=rabbit
-    - RABBITMQ_USER=guest
-    - RABBITMQ_PASSWORD=guest
+      # You can set the default user and pass for rabbitmq
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
     ports:
       - "15672:15672" # RabbitMQ http API
       - "5672:5672"   # AMQP connection to RabbitMQ

@@ -21,7 +21,7 @@ rabbit.publish = function (msg) {
 // PRODUCTION: amqps://username:password@host.com:port
 function tryConnect (resolve, attempt = 0) {
   // TODO: should read from the environment variables (RABBITMQ_HOSTNAME, RABBITMQ_USER, RABBITMQ_PASSWORD).
-  amqp.connect('amqp://guest:guest@rabbit', (err, conn) => {
+  amqp.connect('amqp://admin:admin@rabbit', (err, conn) => {
     if (err) {
       console.log(err)
       if (attempt < 10) {
