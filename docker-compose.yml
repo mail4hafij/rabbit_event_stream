@@ -18,8 +18,8 @@ services:
     container_name: rabbitmq
     environment:
     - RABBITMQ_HOSTNAME=rabbit
-    - RABBITMQ_USER=esuser
-    - RABBITMQ_PASSWORD=espassword
+    - RABBITMQ_USER=guest
+    - RABBITMQ_PASSWORD=guest
     ports:
       - "15672:15672" # RabbitMQ http API
       - "5672:5672"   # AMQP connection to RabbitMQ
