@@ -18,7 +18,7 @@ How to run locally:
 
 You should now see the dummy events are now published by the web server to the RabbitMQ.
 
-# Notifictaion service.
+# Notifictaion service
 The next step is to build a microservice (let's say internal_notification_service, checkout https://github.com/mail4hafij/notification_service) that should consume some events from rabbitMQ and do something. In order to internal_notification_service to consume events from rabbitMQ the container must use the same network that the rabbitMQ is running in.
 
   1. Given the rabbit_event_stream is already running, start the service (notification_service) similarly with docker-compose. This will also attach the container to the rabbit_event_stream network. 
