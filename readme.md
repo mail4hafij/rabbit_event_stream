@@ -27,7 +27,7 @@ The next step is to build a microservice (let's say internal_notification_servic
 or for a service that is not run via compose:  
 
 1. First build it from the docker file: 
-``` docker build . -t notification_service_src ```  
+``` docker build -f Dockerfile.local . -t notification_service_src ```  
 
 2. Then run it with the following mentioned paremeters:
 ``` docker run --name any_name_container --network=rabbit_event_stream notification_service_src ``` 
