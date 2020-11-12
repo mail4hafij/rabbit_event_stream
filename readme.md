@@ -37,4 +37,4 @@ or if you don't want to use docker-compose then:
 
 Debug:
   1. Open notification_service solution in Visual Studio (in order to start fresh, delete the .vs folder and make sure the docker host is running when opening the solution. Then set docker-compose as startup project which will spin up the container). Hit the run button.
-  2. Go to the rabbit_event_stream/scenarios and run 'node dummy_events.js'
+  2. Go to the rabbit_event_stream/scenarios and run ``` node dummy_events.js ```
