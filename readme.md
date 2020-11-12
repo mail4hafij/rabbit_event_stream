@@ -35,5 +35,6 @@ or if you don't want to use docker-compose then:
   
   ``` docker run --name any_name_container --network=rabbit_event_stream notification_service_src ``` 
 
-Let's test then,
-1. Run the scenarios/dummy_events.js from rabbit_event_stream, so that you can test if notification_service is able to get these dummy events from rabbitMQ.
+Debug:
+  1. Open notification_service solution in Visual Studio (in order to start fresh, delete the .vs folder and make sure the docker host is running when opening the solution. Then set docker-compose as startup project which will spin up the container). Hit the run button.
+  2. Go to the rabbit_event_stream/scenarios and run 'node dummy_events.js'
