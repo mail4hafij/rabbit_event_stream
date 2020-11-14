@@ -5,9 +5,7 @@ console.log(chalk.blue('putting dummy messages on local event stream'))
 
 ;(async () => {
   const userId = 123
-  console.log('Something Happened')
-
-  await util.seconds(2)
+  
   await util.publish(
     'Something Happened',
     `
@@ -26,6 +24,7 @@ console.log(chalk.blue('putting dummy messages on local event stream'))
       }
     `
   )
+  
   await util.seconds(2)
   await util.publish(
     'Hello World',
